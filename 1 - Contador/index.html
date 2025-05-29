@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f9f9f9;
+    }
+
+    #contador {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contador">0</div>
+  <button onclick="incrementar()">Incrementar</button>
+  <button onclick="resetar()">Resetar</button>
+
+  <script>
+    let valor = 0;
+
+    function atualizarTela() {
+      document.getElementById('contador').innerText = valor;
+    }
+
+    function incrementar() {
+      valor++;
+      atualizarTela();
+    }
+
+    function resetar() {
+      valor = 0;
+      atualizarTela();
+    }
+  </script>
+
+</body>
+</html>
